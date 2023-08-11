@@ -22,7 +22,12 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {data.slip.advice}
+      <div className="p-8 text-center background-color-dark-grayish-blue rounded-lg ">
+        <div className="pb-4 uppercase text-primary-neon tracking-[.25em]">
+          Advice #{data.slip.id}
+        </div>
+        <div className="pb-4 text-3xl">&ldquo;{data.slip.advice}&rdquo;</div>
+      </div>
     </main>
   );
 }
