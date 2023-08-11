@@ -23,10 +23,20 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="p-8 text-center background-color-dark-grayish-blue rounded-lg ">
-        <div className="pb-4 uppercase text-primary-neon tracking-[.25em]">
+        <div className="pb-4 uppercase text-primary-neon tracking-[.25em] ">
           Advice #{data.slip.id}
         </div>
-        <div className="pb-4 text-3xl">&ldquo;{data.slip.advice}&rdquo;</div>
+        <div className="pb-4 text-3xl font-medium">
+          &ldquo;{data.slip.advice}&rdquo;
+        </div>
+        <div>
+          <Image
+            src="../../images/pattern-divider-desktop.svg"
+            width={500}
+            height={2}
+            alt="divider"
+          ></Image>
+        </div>
       </div>
     </main>
   );
