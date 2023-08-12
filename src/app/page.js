@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import HorizontalLine from "../../images/pattern-divider-desktop.svg";
 import { useEffect, useState } from "react";
 
 const ADVICE_SLIP_API = "https://api.adviceslip.com/advice";
@@ -21,19 +22,19 @@ export default function Home() {
   if (!data) return <p>No advice data</p>;
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex max-w-3xl min-h-screen flex-col items-center justify-between p-24">
       <div className="p-8 text-center background-color-dark-grayish-blue rounded-lg ">
         <div className="pb-4 uppercase text-primary-neon tracking-[.25em] ">
           Advice #{data.slip.id}
         </div>
-        <div className="pb-4 text-3xl font-medium">
+        <div className="pb-10 text-3xl font-medium">
           &ldquo;{data.slip.advice}&rdquo;
         </div>
-        <div>
+        <div className="pb-8">
           <Image
-            src="../../images/pattern-divider-desktop.svg"
-            width={500}
-            height={2}
+            src={HorizontalLine}
+            width={600}
+            height={1}
             alt="divider"
           ></Image>
         </div>
